@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Ubuntu', sans-serif;
+			display: grid;
+			place-items: center;
+		}
+
+		:root {
+			--sm: 14px;
+			--md: 16px;
+			--lg: 18px;
+			--Marine-blue: hsl(213, 96%, 18%);
+			--Purplish-blue: hsl(243, 100%, 62%);
+			--Pastel-blue: hsl(228, 100%, 84%);
+			--Light-blue: hsl(206, 94%, 87%);
+			--Strawberry-red: hsl(354, 84%, 57%);
+			--Grey: rgb(192, 192, 192);
+			--fw-400: 400;
+			--fw-500: 500;
+			--fw-700: 700;
+		}
+
+		.main-container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			box-shadow: 0 2px black;
+		}
+
+		.stepbar {
+			width: 200px;
+			height: 460px;
+			padding: 20px;
+			background-image: url('../archivos/assets/images/bg-sidebar-desktop.svg');
+			background-size: cover;
+			border-radius: 10px;
+		}
+
+		.stepbar .stepbar-cards {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			background: none;
+			border: none;
+			width: 200px;
+			color: var(--Light-blue);
+		}
+
+		.stepbar-cards span {
+			width: 30px;
+			height: 30px;
+			border: 1px solid var(--Light-blue);
+			border-radius: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: var(--Light-blue);
+			
+		}
+
+		.stepbar-cards:active {
+			background-color: var(--Light-blue);
+			color: var(--Marine-blue);
+			border: 1px solid var(--Marine-blue);
+			position: absolute;
+		}
+
+		.stepbar-cards-choice p {
+			margin: 10px;
+		}
+
+		.section-container {
+			padding: 30px 0 0 70px;
+		}
+
+		.section-container p {
+			color: var(--Grey);
+			font-weight: 800;
+		}
+
+		.section-container .user-info {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.section-container .user-info input {
+			width: auto;
+			height: 2.5em;
+			border-radius: 10px;
+			border: solid 1px var(--Grey);
+			padding-left: 1em;
+		}
+
+		.section-container .user-info span {
+			color: var(--Marine-blue);
+		}
+
+		.button {
+			display: inline;
+			flex-direction: column;
+			gap: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<main class="main-container">
+		<aside class="stepbar">
+			<div class="stepbar-container">
+				<button class="stepbar-cards">
+					<span>1</span>
+					<div class="stepbar-cards-choice">
+						<p>Step 1</p>
+						<p>YOUR INFO</p>
+					</div>
+				</button>
+				<button class="stepbar-cards">
+					<span>2</span>
+					<div class="stepbar-cards-choice">
+						<p>Step 2</p>
+						<p>SELECT PLAN</p>
+					</div>
+				</button>
+				<button class="stepbar-cards">
+					<span>3</span>
+					<div class="stepbar-cards-choice">
+						<p>Step 3</p>
+						<p>ADD-ONS</p>
+					</div>
+				</button>
+				<button class="stepbar-cards">
+					<span>4</span>
+					<div class="stepbar-cards-choice">
+						<p>Step 4</p>
+						<p>SUMMARY</p>
+					</div>
+				</button>
+			</div>
+		</aside>
+		<section class="section-container">
+			<h1>Personal info</h1>
+			<p>Please provide your name, email address and phone number.</p>
+			<div class="user-info">
+				<span>Name</span>
+				<input type="text" placeholder="Vanessa Mint">
+				<span>Email Address</span>
+				<input type="email" placeholder="vanessamint@example.com">
+				<span>Phone Number</span>
+				<input type="number" placeholder="ej: 1559532224">
+				<div class="button">
+					<button type="submit">Next Step</button>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>
